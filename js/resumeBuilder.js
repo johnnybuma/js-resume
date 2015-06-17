@@ -5,11 +5,12 @@ var bio = {
 		"mobile": "801-673-7144",
 		"email": "johnny.buma@gmail.com",
 		"github": "johnnybuma",
-		"linkedin": "jonathanbuma"
+		"linkedin": "jonathanbuma",
+		"location": "West Covina, California"
 	},
 	"WelcomeMsg": "Go ahead and check out my chomps, then let me know what I can do for you!",
 	"skills": [
-		"HTML5", "CSS3", "JavaScript", "jQuery", "Bootstrap3", "Organized", "Obviously a perfect fit!", "Don't miss out on this one, I'm a catch!"
+		"HTML5", "CSS3", "JavaScript", "jQuery", "Bootstrap3" 
 	],
 	"bioPic": "images/fry.jpg"
 };
@@ -20,7 +21,7 @@ var work = [
 		"title": "Front-end Web Developer",
 		"dates": "May 2014 - Present",
 		"location": "Los Angeles, California",
-		"description": "I have been independently studying and practicing web development since 2012. In May of 2014 I was given the opportunity to leave my previous career as a commercial electrician to refine my skills and focus my career on web development. I am currently available to consider full-time employment"
+		"description": "I have been independently studying and practicing web development since 2012. In May of 2014 I was given the opportunity to leave my previous career as a commercial electrician to refine my skills and focus my career on web development. I am currently available to consider full-time employment opportunities."
 	},
 	{
 		"employer": "Accord Electric Corp",
@@ -139,7 +140,7 @@ projects.display = function () {
 		$(".project-entry:last").append(formattedProjectDate);
 		var formattedProjectDescription = HTMLprojectDescription.replace("%data%",projects[i].description);
 		$(".project-entry:last").append(formattedProjectDescription);
-		
+		//TODO: Add code for project images to be displayed if available!!
 	}
 
 }
@@ -161,9 +162,9 @@ education.display = function() {
 
 	}	
 }
-console.log(education.length);
 bio.skills.display();
 work.display();
 projects.display();
 education.display();
 
+$("#mapDiv").append(googleMap);

@@ -15,3 +15,12 @@
 ul {
 	display: list-item;
 }
+
+.date-text {
+	padding-right: 10px;
+}
+
+a {
+	padding-bottom: 10px;
+}
+
