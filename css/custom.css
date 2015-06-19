@@ -1,5 +1,4 @@
 
-
 .col-md-6 {
 	overflow: auto;
 	text-align: center;
@@ -24,3 +23,12 @@ a {
 	padding-bottom: 10px;
 }
 
+@media screen and (max-width:560px) {
+	#title {
+		display: inline;
+	}
+}
+
+#role span {
+	float: left;
+}

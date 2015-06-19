@@ -8,9 +8,9 @@ var bio = {
 		"linkedin": "jonathanbuma",
 		"location": "West Covina, California"
 	},
-	"WelcomeMsg": "Go ahead and check out my chomps, then let me know what I can do for you!",
+	"WelcomeMsg": "Master of Front-end development and all things JavaScript",
 	"skills": [
-		"HTML5", "CSS3", "JavaScript", "jQuery", "Bootstrap3" 
+		"HTML5", "CSS3", "JavaScript", "jQuery",  "Node.js", "Express.js", "Angular.js", "Bootstrap3", "WordPress"
 	],
 	"bioPic": "images/fry.jpg"
 };
@@ -79,8 +79,8 @@ var education = [
 
 var formattedName = HTMLheaderName.replace("%data%",bio.name);
 var formattedRole = HTMLheaderRole.replace("%data%",bio.role);
-$("#header").prepend(formattedRole);
-$("#header").prepend(formattedName);
+$("#title").prepend(formattedRole);
+$("#title").prepend(formattedName);
 
 var formattedMobile = HTMLmobile.replace("%data%",bio.contacts.mobile);
 var formattedEmail = HTMLemail.replace("%data%",bio.contacts.email);
@@ -140,6 +140,7 @@ projects.display = function () {
 		$(".project-entry:last").append(formattedProjectDate);
 		var formattedProjectDescription = HTMLprojectDescription.replace("%data%",projects[i].description);
 		$(".project-entry:last").append(formattedProjectDescription);
+
 		//TODO: Add code for project images to be displayed if available!!
 	}
 
