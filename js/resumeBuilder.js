@@ -2,17 +2,17 @@ var bio = {
 	"name": "Jonathan Buma",
 	"role": "Front-end Web Developer",
 	"contacts": {
-		"mobile": "801-673-7144",
-		"email": "johnny.buma@gmail.com",
-		"github": "johnnybuma",
-		"linkedin": "jonathanbuma",
+		"mobile": "<a href=\"tel:18016737144\">(801) 673-7144</a>",
+		"email": "<a href=\"mailto:johnny.buma@gmail.com\">johnny.buma@gmail.com</a>",
+		"github": "<a href=\"https://github.com/johnnybuma\">johnnybuma</a>",
+		"linkedin": "<a href=\"https://linkedin.com/in/jonathanbuma\">jonathanbuma</a>",
 		"location": "West Covina, California"
 	},
 	"WelcomeMsg": "Master of Front-end development and all things JavaScript",
 	"skills": [
 		"HTML5", "CSS3", "JavaScript", "jQuery",  "Node.js", "Express.js", "Angular.js", "Bootstrap3", "WordPress"
 	],
-	"bioPic": "images/fry.jpg"
+	"bioPic": "images/me.jpg"
 };
 
 var work = [
@@ -46,7 +46,14 @@ var projects = [
 		"date": "March 2015",
 		"description": "Working on redevelopment of non-profit Green Media orginizations web presence",
 		"image": "images/gln.jpg"
+	},
+	{
+		"title": "Dynamic Resume Builder",
+		"date": "In Progress",
+		"description": "Development of open source, dynamic resume builder",
+		"image": "images/resume.jpg" 
 	}
+
 
 
 ];
@@ -56,21 +63,21 @@ var education = [
 		{
 			"Course": "Front-end Web Development",
 			"School": "Udacity",
-			"Format": "Online - Guided",
+			"Location": "Online",
 			"Dates": "June 2015 - Present",
 			"Credential": "Nano Degree"
 		},
 		{
 			"Course": "Introduction to CS and Programming Using Python",
 			"School": "MITx",
-			"Format": "Online - Self-paced",
+			"Location": "Online",
 			"Dates": "June 2013 - December 2013",
 			"Credential": "Certificate"
 		},
 		{
 			"Course": "Introduction to Computer Science",
 			"School": "MITx",
-			"Format": "Online",
+			"Location": "Online",
 			"Dates": "January 2014 - July 2014",
 			"Credential": "Certificate"
 		}
@@ -79,7 +86,7 @@ var education = [
 
 var formattedName = HTMLheaderName.replace("%data%",bio.name);
 var formattedRole = HTMLheaderRole.replace("%data%",bio.role);
-$("#title").prepend(formattedRole);
+$("#role").prepend(formattedRole);
 $("#title").prepend(formattedName);
 
 var formattedMobile = HTMLmobile.replace("%data%",bio.contacts.mobile);
@@ -98,7 +105,7 @@ $("#footerContacts").prepend(formattedMobile);
 $("#footerContacts").append(formattedEmail);
 $("#footerContacts").append(formattedGithub);
 $("#footerContacts").append(formattedLinkedin);
-$("#header").append(formattedBioPic);
+//$("#header").append(formattedBioPic);
 $("#header").append(formattedWelcomeMsg);
 
 $("#header").append(HTMLskillsStart);
@@ -152,12 +159,13 @@ education.display = function() {
 	for (var i = 0; i < education.length; i++){
 		var formattedSchoolName = HTMLschoolName.replace("%data%",education[i].School);
 		$(".education-entry:last").append(formattedSchoolName);
-		var formattedSchoolCourse = HTMLschoolMajor.replace("%data%",education[i].Course);
-		$(".education-entry:last").append(formattedSchoolCourse);
-		var formattedSchoolLocation = HTMLschoolLocation.replace("%data%",education[i].Format);
-		$(".education-entry:last").append(formattedSchoolLocation);
 		var formattedSchoolDates = HTMLschoolDates.replace("%data%",education[i].Dates);
 		$(".education-entry:last").append(formattedSchoolDates);
+		var formattedSchoolCourse = HTMLschoolMajor.replace("%data%",education[i].Course);
+		$(".education-entry:last").append(formattedSchoolCourse);
+		var formattedSchoolLocation = HTMLschoolLocation.replace("%data%",education[i].Location);
+		$(".education-entry:last").append(formattedSchoolLocation);
+		
 		var formattedSchoolDegree = HTMLschoolDegree.replace("%data%",education[i].Credential);
 		$(".education-entry:last").append(formattedSchoolDegree);
 
